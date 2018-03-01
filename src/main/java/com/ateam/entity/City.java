@@ -11,6 +11,7 @@ public class City {
     private List<List<Integer>> city;
 
     public City(int rows, int cols) {
+        city = new ArrayList<>();
 
         for (int i = 0; i < rows; i++) {
             List<Integer> list = new ArrayList<>();
