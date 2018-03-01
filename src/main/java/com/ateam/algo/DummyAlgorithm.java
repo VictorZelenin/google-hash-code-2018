@@ -14,7 +14,7 @@ public class DummyAlgorithm {
 
         Queue<Vehicle> loadedVehicles = new ArrayDeque<>();
         List<Ride> rides = simulation.getRides();
-        rides.sort(Comparator.comparingInt(Ride::getEarliestStart));
+        sort(rides);
         List<Vehicle> allVehicles = simulation.getVehicles();
         for (int i = 0; i < simulation.getSteps(); i++) {
 //            if (loadedVehicles.size() == allVehicles.size()) {
@@ -61,7 +61,7 @@ public class DummyAlgorithm {
 
     private void sort(List<Ride> rides) {
         rides.sort((o1, o2) -> {
-            int es = 8 * (o1.getEarliestStart() - o2.getEarliestStart());
+            int es = 10 * (o1.getEarliestStart() - o2.getEarliestStart());
 
             int d = 4 * (int) (Math.abs(o1.getStart().x - o1.getFinish().x) + Math.abs(o1.getStart().getY() - o1.getFinish().y));
             int d2 = 4 * (int) (Math.abs(o2.getStart().x - o2.getFinish().x) + Math.abs(o2.getStart().getY() - o2.getFinish().y));
