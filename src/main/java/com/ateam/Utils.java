@@ -11,9 +11,9 @@ public class Utils {
     private Utils() {
     }
 
-    public static void writeResults(Candidate finalCandidate) {
+    public static void writeResults(Candidate finalCandidate, String fileName) {
         try {
-            BufferedWriter writer = new BufferedWriter(new FileWriter("result.out"));
+            BufferedWriter writer = new BufferedWriter(new FileWriter(fileName));
 
             for (Vehicle v : finalCandidate.getVehicles()) {
                 writer.write(v.getRides().size() + " ");
