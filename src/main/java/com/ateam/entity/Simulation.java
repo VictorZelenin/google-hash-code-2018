@@ -1,9 +1,5 @@
 package com.ateam.entity;
 
-import com.ateam.entity.City;
-import com.ateam.entity.Ride;
-import com.ateam.entity.Vehicle;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 import java.util.ArrayList;
